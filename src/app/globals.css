@@ -1,27 +1,174 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;700;900&family=Urbanist:wght@300;600&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Urbanist', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+
+html{
+    font-size: 62.5%;
+    background: black;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: -24rem;
+}
+
+main h2{
+    font-size: 3rem;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 4.8rem;
+    color: white;
+}
+
+main h2 .icons{
+    color: #68B984;
+}
+
+
+
+nav{
+    width:55rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .1rem solid #ccc;
+}
+
+nav a{
+    font-size: 2rem;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #ccc;
+    border-bottom: .3rem solid transparent;
+}
+
+nav a:hover{
+    border-color: #3A3845;
+}
+
+nav a.active {
+    color:#fff;
+    border-color: #68B984;
+}
+
+
+
+form input{
+    border: .1rem solid #ccc;
+    border-radius: .3rem;
+    width: 45rem;
+    margin: 4rem 0;
+
+    padding: .6rem 1rem;
+    font-size: 1.6rem;
+    letter-spacing: .06rem;
+    font-weight: bold;
+}
+
+form button{
+    padding: .8rem 2.8rem;
+    border: none;
+    border-radius: .3rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 2.4rem;
+     background-color: #68B984;
+     color: #fff;
+}
+
+label{
+    font-size: 1.5rem;
+    letter-spacing: .06rem;
+    color: #b3afc9;
+    font-weight: bold;
+}
+
+
+
+.main-task li{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    width:50rem;
+    min-height: 6rem;
+    border-bottom: .1rem solid #ccc;
+}
+
+.main-task li:first-child{
+    border-top: .1rem solid #ccc;
+}
+
+.main-task li:hover{
+    background-color: #fef2f2;
+}
+
+.main-task li input[type="checkbox"]:checked  + label {
+    text-decoration: line-through;
+    color: #D14D72;
+}
+
+.main-task li button{
+    padding: .6rem 1rem;
+    width: 7rem;
+    background-color: #D14D72;
+    color: #FFF9F9;
+    border:none;
+    display: inline-block;
+    cursor: pointer;
+    justify-self: center;
+    letter-spacing: .1rem;
+}
+.rdp.p-3{
+    width:100vw;
+    height:30rem;
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+
+.space-x-1{
+    width:60rem;
+}
+
+.text-sm.font-medium{
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+
+}
+.rdp-button_reset{
+ padding:0%;
+ font-size:3rem;
+ width:4rem;
+}
+
+.button{
+    padding: 20rem;;
+    
+}
+/* .inline-flex.items-center{
+    background: #b3afc9;
+} */
+.h-4.w-4{
+    color:black;
+    font-weight: bold;
+    font-size: 2rem;
 }
